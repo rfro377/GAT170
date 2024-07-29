@@ -1,2 +1,3 @@
-2024/07/21-11:26:10.224 30b8 Creating DB C:/Users/rjfro/Desktop/MDS/GAT170/Week_1/Assignment/GrayBoxTreeTemple/Saved/webcache_4430\Local Storage\leveldb since it was missing.
-2024/07/21-11:26:10.254 30b8 Reusing MANIFEST C:/Users/rjfro/Desktop/MDS/GAT170/Week_1/Assignment/GrayBoxTreeTemple/Saved/webcache_4430\Local Storage\leveldb/MANIFEST-000001
+2024/07/22-15:21:55.644 1888 Reusing MANIFEST C:/Users/rjfro/Desktop/MDS/GAT170/Week_1/Assignment/GrayBoxTreeTemple/Saved/webcache_4430\Local Storage\leveldb/MANIFEST-000001
+2024/07/22-15:21:55.693 1888 Recovering log #3
+2024/07/22-15:21:55.695 1888 Reusing old log C:/Users/rjfro/Desktop/MDS/GAT170/Week_1/Assignment/GrayBoxTreeTemple/Saved/webcache_4430\Local Storage\leveldb/000003.log 
