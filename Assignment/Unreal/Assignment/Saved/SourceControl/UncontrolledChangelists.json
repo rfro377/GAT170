@@ -1,0 +1,25 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"H:/MDS/GAT170/Assignment/Unreal/Assignment/Content/Custom/T_TorchDiffuse2K.uasset",
+				"H:/MDS/GAT170/Assignment/Unreal/Assignment/Content/Custom/T_TorchMetallic2K.uasset",
+				"H:/MDS/GAT170/Assignment/Unreal/Assignment/Content/Custom/T_TorchNormal2K.uasset",
+				"H:/MDS/GAT170/Assignment/Unreal/Assignment/Content/Custom/T_TorchRoughness2K.uasset",
+				"H:/MDS/GAT170/Assignment/Unreal/Assignment/Content/Custom/T_TorchStoneDiffuse2K.uasset",
+				"H:/MDS/GAT170/Assignment/Unreal/Assignment/Content/Custom/T_TorchStoneNormal2K.uasset",
+				"H:/MDS/GAT170/Assignment/Unreal/Assignment/Content/Custom/T_TorchStoneRoughness2K.uasset",
+				"H:/MDS/GAT170/Assignment/Unreal/Assignment/Content/Custom/Torch.uasset",
+				"H:/MDS/GAT170/Assignment/Unreal/Assignment/Content/Custom/Torch_Skeleton.uasset",
+				"H:/MDS/GAT170/Assignment/Unreal/Assignment/Content/Custom/SM_Torch.uasset",
+				"H:/MDS/GAT170/Assignment/Unreal/Assignment/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/2/9Q/H3WM6KVHJJC32RWTFAAYIV.uasset",
+				"H:/MDS/GAT170/Assignment/Unreal/Assignment/Content/Custom/M_BasicMaterial.uasset",
+				"H:/MDS/GAT170/Assignment/Unreal/Assignment/Content/Custom/MI_Torch.uasset",
+				"H:/MDS/GAT170/Assignment/Unreal/Assignment/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/B/JL/C5SCZT9EMYAGOGNOMP4XK3.uasset"
+			]
+		}
+	]
+}
