@@ -9,13 +9,13 @@
 # This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
-*/[Ll]ibrary/
-*/[Tt]emp/
-*/[Oo]bj/
-*/[Bb]uild/
-*/[Bb]uilds/
-*/[Ll]ogs/
-*/[Uu]ser[Ss]ettings/
+H:\MDS\GAT170\Assignment 2- Unity\Assignment2-RileyFromont/[Ll]ibrary/
+H:\MDS\GAT170\Assignment 2- Unity\Assignment2-RileyFromont/[Tt]emp/
+H:\MDS\GAT170\Assignment 2- Unity\Assignment2-RileyFromont/[Oo]bj/
+H:\MDS\GAT170\Assignment 2- Unity\Assignment2-RileyFromont/[Bb]uild/
+H:\MDS\GAT170\Assignment 2- Unity\Assignment2-RileyFromont/[Bb]uilds/
+H:\MDS\GAT170\Assignment 2- Unity\Assignment2-RileyFromont/[Ll]ogs/
+H:\MDS\GAT170\Assignment 2- Unity\Assignment2-RileyFromont/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
