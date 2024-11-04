@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerLook : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PlayerLook : MonoBehaviour
     [Range(0f, 1000f)]
     public float Mouse_Sens = 100f;
     private float xRotation = 0f;
+
+    public InputActionReference lookaction;
 
     private bool LockLook = false;
     void Start()
@@ -27,9 +30,10 @@ public class PlayerLook : MonoBehaviour
     {
         if (!LockLook)
         {
+            Vector2 lookvalues = lookaction.action.ReadValue<Vector2>();
             //Collect Mouse Input
-            float x_Mouse = Input.GetAxis("Mouse X") * Mouse_Sens * Time.deltaTime;
-            float y_Mouse = Input.GetAxis("Mouse Y") * Mouse_Sens * Time.deltaTime;
+            float x_Mouse = lookvalues.x * Mouse_Sens * Time.deltaTime;
+            float y_Mouse = lookvalues.y * Mouse_Sens * Time.deltaTime;
 
 
             xRotation -= y_Mouse;

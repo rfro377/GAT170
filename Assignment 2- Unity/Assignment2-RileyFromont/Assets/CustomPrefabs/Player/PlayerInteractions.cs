@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerInteractions : MonoBehaviour
 {
@@ -10,8 +11,13 @@ public class PlayerInteractions : MonoBehaviour
     public GameObject jobpad;
     public GameObject currentPad = null;
     public bool ShowJobPad = false;
-
+    public float maxInteractDistance=2f;
     public float PadLerpalpha = 0;
+
+    public LayerMask interactionlayer;
+
+    public InputActionReference interact;
+    public InputActionReference tab;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +27,31 @@ public class PlayerInteractions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        JobPadHandle();
+        InteractHandle();
+    }
+
+
+    private void InteractHandle()
+    {
+        if (interact.action.triggered)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(Camera.main.transform.position,Camera.main.transform.forward,out hit, maxInteractDistance, interactionlayer))
+            {
+                Debug.Log("Hit");
+                Collider hitobj = hit.collider;
+                if (hitobj.GetComponent<Interactable>() != null)
+                {
+                    Debug.Log("HERE");
+                    hitobj.GetComponent<Interactable>().Interact(this.gameObject);
+                }
+            }
+        }
+    }
+    private void JobPadHandle()
+    {
+        if (tab.action.triggered)
         {
             ShowJobPad = !ShowJobPad;
             PadLerpalpha = 0f;
@@ -29,8 +59,8 @@ public class PlayerInteractions : MonoBehaviour
 
         if (ShowJobPad && currentPad == null)
         {
-            currentPad = Instantiate(jobpad,Camera.main.transform,false);
-            
+            currentPad = Instantiate(jobpad, Camera.main.transform, false);
+
             currentPad.transform.Rotate(0, 180f, 0);
         }
 
@@ -40,9 +70,10 @@ public class PlayerInteractions : MonoBehaviour
             GetComponent<PlayerLook>().LockedLook(true);
             GetComponent<PlayerMove>().LockMovement(true);
         }
-        if(!ShowJobPad) {
+        if (!ShowJobPad)
+        {
 
-          
+
             if (PadLerpalpha >= 1f)
             {
                 Destroy(currentPad);
@@ -53,8 +84,8 @@ public class PlayerInteractions : MonoBehaviour
             {
                 currentPad.transform.localPosition = Vector3.Lerp(new Vector3(0, -0.1f, 0.5f), new Vector3(0, -0.8f, 0.5f), PadLerpalpha);
             }
-            }
+        }
 
-        if(PadLerpalpha >= 1f) {  } else { PadLerpalpha += Time.deltaTime; }
+        if (PadLerpalpha >= 1f) { } else { PadLerpalpha += Time.deltaTime; }
     }
 }

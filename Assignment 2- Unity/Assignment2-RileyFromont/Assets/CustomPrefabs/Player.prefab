@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1673661243379344176}
   - component: {fileID: 4957469821211250426}
+  - component: {fileID: 8951060438541598513}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -91,6 +92,36 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &8951060438541598513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7321453496501701423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 2065f3482f5cfba49ad40c04c7c44ca2, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &8806106711260181291
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,6 +136,7 @@ GameObject:
   - component: {fileID: 4288000658000709791}
   - component: {fileID: 2832982038547172764}
   - component: {fileID: 9210313754313990384}
+  - component: {fileID: 4777050764291793406}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -242,8 +274,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a067da0a2be754faafc50dd46b2ccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerTransform: {fileID: 0}
-  Mouse_Sens: 100
+  PlayerTransform: {fileID: 1673661243379344176}
+  Mouse_Sens: 23
+  lookaction: {fileID: -5630151704836100654, guid: 2065f3482f5cfba49ad40c04c7c44ca2, type: 3}
 --- !u!114 &9210313754313990384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,3 +292,37 @@ MonoBehaviour:
   jobpad: {fileID: 3524356924022730034, guid: ec21113d5ed4d3045ace0b513c36f8dd, type: 3}
   currentPad: {fileID: 0}
   ShowJobPad: 0
+  maxInteractDistance: 2
+  PadLerpalpha: 0
+  interactionlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  interact: {fileID: 1781555164194001046, guid: 2065f3482f5cfba49ad40c04c7c44ca2, type: 3}
+  tab: {fileID: -2874006991715761804, guid: 2065f3482f5cfba49ad40c04c7c44ca2, type: 3}
+--- !u!114 &4777050764291793406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8806106711260181291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7e4e8ea8930014e97cfb2d2c846d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 4957469821211250426}
+  speedFactor: 5
+  maxSpeed: 30
+  movement: {fileID: -1680190386980627800, guid: 2065f3482f5cfba49ad40c04c7c44ca2, type: 3}
+  jump: {fileID: -2099379676528639254, guid: 2065f3482f5cfba49ad40c04c7c44ca2, type: 3}
+  gravity_enabled: 1
+  Gravity_coeff: -9.81
+  jump_height: 3
+  GroundCollision: {fileID: 1127276769888594997}
+  groundDistCheck: 0.3
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 64
+  velocity: {x: 0, y: 0, z: 0}
+  vel_magnitude: 0

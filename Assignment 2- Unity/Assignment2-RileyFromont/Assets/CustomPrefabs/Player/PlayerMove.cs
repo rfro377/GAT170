@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PlayerMove : MonoBehaviour
     public float speedFactor = 10f;
     [Range(0f, 50f)]
     public float maxSpeed = 30f;
+    public InputActionReference movement;
+    public InputActionReference jump;
 
     public bool gravity_enabled = true;
     public float Gravity_coeff = -9.81f;
@@ -31,14 +34,15 @@ public class PlayerMove : MonoBehaviour
     {
         if (!LockMove){
 
+            Vector2 moveInput = movement.action.ReadValue<Vector2>();
             isGrounded = Physics.CheckSphere(GroundCollision.position,groundDistCheck,groundMask);
           
-            float x = Input.GetAxis("Horizontal");
-            float z = Input.GetAxis("Vertical");
+            //float x = Input.GetAxis("Horizontal");
+            //float z = Input.GetAxis("Vertical");
 
             //added Deadzone
-            if(Mathf.Abs(x) < 0.5) {  x = 0f; }
-            if(Mathf.Abs(z) < 0.5) {  z = 0f; }
+            if(Mathf.Abs(moveInput.x) < 0.2) {  moveInput.x = 0f; }
+            if(Mathf.Abs(moveInput.y) < 0.2) { moveInput.y = 0f; }
 
             
 
@@ -48,13 +52,13 @@ public class PlayerMove : MonoBehaviour
             if (gravity_enabled)
             {
 
-                Vector3 hzmovement = transform.right * x;
-                Vector3 fwmovement = transform.forward * z;
+                Vector3 hzmovement = transform.right * moveInput.x;
+                Vector3 fwmovement = transform.forward * moveInput.y;
 
                 velocity.x = (hzmovement.x + fwmovement.x);
-                velocity.z = (hzmovement.z + fwmovement.z);
+                velocity.z = (fwmovement.z + fwmovement.z);
 
-                velocity.Normalize();
+                //velocity.Normalize();
                 velocity *= speedFactor;
                 controller.Move(velocity * Time.deltaTime);
 
@@ -63,7 +67,7 @@ public class PlayerMove : MonoBehaviour
 
 
 
-                if (Input.GetButtonDown("Jump") && isGrounded)
+                if (jump.action.triggered && isGrounded)
                     {
                     vertvelocity.y += Mathf.Sqrt(jump_height*-3.0f*Gravity_coeff);
                 }
