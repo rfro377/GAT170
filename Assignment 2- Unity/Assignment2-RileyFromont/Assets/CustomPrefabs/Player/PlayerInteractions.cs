@@ -39,11 +39,10 @@ public class PlayerInteractions : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(Camera.main.transform.position,Camera.main.transform.forward,out hit, maxInteractDistance, interactionlayer))
             {
-                Debug.Log("Hit");
+                
                 Collider hitobj = hit.collider;
                 if (hitobj.GetComponent<Interactable>() != null)
                 {
-                    Debug.Log("HERE");
                     hitobj.GetComponent<Interactable>().Interact(this.gameObject);
                 }
             }
