@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,6 +17,8 @@ public class PlayerInteractions : MonoBehaviour
 
     public InputActionReference interact;
     public InputActionReference tab;
+
+    public bool T1access = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -86,5 +87,15 @@ public class PlayerInteractions : MonoBehaviour
         }
 
         if (PadLerpalpha >= 1f) { } else { PadLerpalpha += Time.deltaTime; }
+    }
+    public bool hasAccess(string reqaccess)
+    {
+        switch (reqaccess)
+        {
+            case "T1":
+                return T1access;
+            default:
+                return false;
+        }
     }
 }

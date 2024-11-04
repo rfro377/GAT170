@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(SphereCollider))]
+[RequireComponent(typeof(Collider))]
 public class Interactable : MonoBehaviour
 {
-    public SphereCollider InteractCollider;
+    public Collider InteractCollider;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,4 +21,5 @@ public class Interactable : MonoBehaviour
 
     //Overridden by  Child Scripts Dependant on Behaviour
     public virtual void Interact(GameObject go) { }
+    public virtual void Activate(bool activated) { }
 }

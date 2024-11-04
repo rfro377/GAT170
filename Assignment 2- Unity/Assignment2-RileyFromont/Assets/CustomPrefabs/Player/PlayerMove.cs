@@ -56,7 +56,7 @@ public class PlayerMove : MonoBehaviour
                 Vector3 fwmovement = transform.forward * moveInput.y;
 
                 velocity.x = (hzmovement.x + fwmovement.x);
-                velocity.z = (fwmovement.z + fwmovement.z);
+                velocity.z = (fwmovement.z + hzmovement.z);
 
                 //velocity.Normalize();
                 velocity *= speedFactor;
