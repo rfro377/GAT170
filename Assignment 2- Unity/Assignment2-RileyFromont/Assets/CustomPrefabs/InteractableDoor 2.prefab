@@ -69,7 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractCollider: {fileID: 4851539175301490760}
   init_pos: {x: 0, y: 0, z: 0}
-  target_pos: {x: 0, y: -3, z: 0}
+  target_pos: {x: 0, y: -4, z: 0}
   isActivated: 0
 --- !u!1 &1743442810540914493
 GameObject:

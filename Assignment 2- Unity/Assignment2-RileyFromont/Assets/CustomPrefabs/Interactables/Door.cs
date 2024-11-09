@@ -17,7 +17,7 @@ public class Door : Interactable
     }
     void Start()
     {
-        init_pos = this.transform.position;
+        init_pos = this.gameObject.transform.localPosition;
     }
 
     // Update is called once per frame
@@ -25,14 +25,14 @@ public class Door : Interactable
     {
         LerpAlpha += Time.deltaTime;
 
-        if(LerpAlpha > 1) { LerpAlpha = 1f; }
+        if(LerpAlpha > 1f) { LerpAlpha = 1f; }
         if (isActivated)
         {
-            this.transform.localPosition = Vector3.Lerp(init_pos, init_pos +target_pos, LerpAlpha);
+            this.gameObject.transform.localPosition = Vector3.Lerp(init_pos, init_pos +target_pos, LerpAlpha);
         }
         else 
         { 
-            this.transform.localPosition = Vector3.Lerp(init_pos + target_pos, init_pos, LerpAlpha); 
+            this.gameObject.transform.localPosition = Vector3.Lerp(init_pos + target_pos, init_pos, LerpAlpha); 
         }
     }
 }

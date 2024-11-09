@@ -73,10 +73,9 @@ public class PlayerMove : MonoBehaviour
                 }
                 //clear GroundCollisionCheck
 
-                if (!isGrounded)
-                {
+               
                     vertvelocity.y += Gravity_coeff * Time.deltaTime;
-                }
+               
                 controller.Move(vertvelocity * Time.deltaTime);
             }
             //vel_magnitude = velocity.magnitude;

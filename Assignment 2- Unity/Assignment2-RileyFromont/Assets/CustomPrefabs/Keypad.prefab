@@ -665,7 +665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a411fc7993a3ac4bb5d6257f77d3200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractCollider: {fileID: 8342700052362252978}
+  InteractCollider: {fileID: 5772060312659278244}
   is_activated: 0
   target: {fileID: 0}
   requiredAccess: 
@@ -693,10 +693,5 @@ BoxCollider:
 --- !u!4 &8301282388244033498 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4748541382146634, guid: 9d4fe4d1b75f5c34b88886dacb4ed20e, type: 3}
-  m_PrefabInstance: {fileID: 8296979186652108176}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &8342700052362252978 stripped
-MeshCollider:
-  m_CorrespondingSourceObject: {fileID: 64162977768146722, guid: 9d4fe4d1b75f5c34b88886dacb4ed20e, type: 3}
   m_PrefabInstance: {fileID: 8296979186652108176}
   m_PrefabAsset: {fileID: 0}

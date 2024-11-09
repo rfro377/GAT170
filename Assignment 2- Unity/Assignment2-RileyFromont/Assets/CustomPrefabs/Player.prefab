@@ -1292,6 +1292,7 @@ MonoBehaviour:
     m_Bits: 65
   velocity: {x: 0, y: 0, z: 0}
   vel_magnitude: 0
+  isGrounded: 0
 --- !u!114 &9210313754313990384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1329,7 +1330,7 @@ MonoBehaviour:
     m_Bits: 128
   interact: {fileID: 1781555164194001046, guid: 2065f3482f5cfba49ad40c04c7c44ca2, type: 3}
   tab: {fileID: -2874006991715761804, guid: 2065f3482f5cfba49ad40c04c7c44ca2, type: 3}
-  attack: {fileID: 0}
+  attack: {fileID: 1120369429361536294, guid: 2065f3482f5cfba49ad40c04c7c44ca2, type: 3}
   T1access: 0
   hasRepairTool: 0
 --- !u!1001 &1344921334039948927
