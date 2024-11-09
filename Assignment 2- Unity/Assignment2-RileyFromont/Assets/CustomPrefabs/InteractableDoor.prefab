@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 669198514239787876}
-  - component: {fileID: 2442754819284580789}
   - component: {fileID: 4607982278252101023}
+  - component: {fileID: 6867621088461039145}
   m_Layer: 0
   m_Name: InteractableDoor
   m_TagString: Untagged
@@ -34,22 +34,6 @@ Transform:
   - {fileID: 6083614818861944457}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2442754819284580789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 33539087280665065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a0a47f557589174d8c42879fccf4500, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InteractCollider: {fileID: 0}
-  init_pos: {x: 0, y: 0, z: 0}
-  target_pos: {x: 0, y: -3, z: 0}
-  isActivated: 0
 --- !u!65 &4607982278252101023
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71,6 +55,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6867621088461039145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33539087280665065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa4bbe227f5ec648a2cc28eb40c1dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractCollider: {fileID: 4607982278252101023}
+  init_pos: {x: 0, y: 0, z: 0}
+  target_pos: {x: 0, y: -3, z: 0}
+  isActivated: 0
 --- !u!1 &3600437827587854236
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pickup : Interactable
+public class GameManager : MonoBehaviour
 {
+    public float faults = 7;
+
+    public bool faultsfixed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +16,9 @@ public class Pickup : Interactable
     // Update is called once per frame
     void Update()
     {
-        
+        if(faults == 0)
+        {
+            faultsfixed = true;
+        }
     }
-   
 }

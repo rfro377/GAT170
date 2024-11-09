@@ -9,7 +9,7 @@ public class PlayerLook : MonoBehaviour
     private Camera PlayerCam;
     public Transform PlayerTransform;
     [Range(0f, 1000f)]
-    public float Mouse_Sens = 100f;
+    public float Mouse_Sens = 3f;
     private float xRotation = 0f;
 
     public InputActionReference lookaction;

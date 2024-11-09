@@ -27,7 +27,7 @@ public class PlayerMove : MonoBehaviour
     public float vel_magnitude;
 
     private bool LockMove = false;
-    private bool isGrounded;
+    public bool isGrounded;
 
     // Update is called once per frame
     void Update()
@@ -72,9 +72,11 @@ public class PlayerMove : MonoBehaviour
                     vertvelocity.y += Mathf.Sqrt(jump_height*-3.0f*Gravity_coeff);
                 }
                 //clear GroundCollisionCheck
-               
 
-                vertvelocity.y += Gravity_coeff * Time.deltaTime;
+                if (!isGrounded)
+                {
+                    vertvelocity.y += Gravity_coeff * Time.deltaTime;
+                }
                 controller.Move(vertvelocity * Time.deltaTime);
             }
             //vel_magnitude = velocity.magnitude;

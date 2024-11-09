@@ -8,7 +8,8 @@ public class PlayerInteractions : MonoBehaviour
 {
 
     public GameObject jobpad;
-    public GameObject currentPad = null;
+    public GameObject repairtool;
+    private GameObject currentPad = null;
     public bool ShowJobPad = false;
     public float maxInteractDistance=2f;
     public float PadLerpalpha = 0;
@@ -17,12 +18,14 @@ public class PlayerInteractions : MonoBehaviour
 
     public InputActionReference interact;
     public InputActionReference tab;
+    public InputActionReference attack;
 
     public bool T1access = false;
+    public bool hasRepairTool = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+      repairtool =  GetComponentInChildren<WeaponScript>(true).gameObject;
     }
 
     // Update is called once per frame
@@ -30,6 +33,7 @@ public class PlayerInteractions : MonoBehaviour
     {
         JobPadHandle();
         InteractHandle();
+        RepairToolHandle();
     }
 
 
@@ -87,6 +91,24 @@ public class PlayerInteractions : MonoBehaviour
         }
 
         if (PadLerpalpha >= 1f) { } else { PadLerpalpha += Time.deltaTime; }
+    }
+
+    public void RepairToolHandle()
+    {
+        if (hasRepairTool)
+        {
+            if (attack.action.IsPressed())
+            {
+                //Activate RepairTool
+                repairtool.GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(true);
+                repairtool.GetComponent<WeaponScript>().Shoot();
+            }
+            else
+            {
+                //Deactivate RepairTool
+                repairtool.GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(false);
+            }
+        }
     }
     public bool hasAccess(string reqaccess)
     {

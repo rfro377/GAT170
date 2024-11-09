@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeypadSwitch : Switch
 {
@@ -15,10 +16,12 @@ public class KeypadSwitch : Switch
     {
         if (CheckAccess()) {
             base.Interact(g);
+            this.GetComponentInChildren<Image>().color = Color.green;
         }
         else
         {
             //Play denied noise
+            this.GetComponentInChildren<Image>().color = Color.red;
         }
     }
 

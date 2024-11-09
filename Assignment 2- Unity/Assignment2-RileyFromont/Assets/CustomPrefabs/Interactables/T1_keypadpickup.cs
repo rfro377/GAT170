@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class T1_keypadpickup : Pickup
+public class T1_keypadpickup : PickUp
 {
     // Start is called before the first frame update
     void Start()
