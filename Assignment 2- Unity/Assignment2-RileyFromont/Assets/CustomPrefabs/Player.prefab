@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 8991296372088463458}
   - component: {fileID: 8079414194244890442}
   - component: {fileID: 8156904916028547065}
+  - component: {fileID: 939760252124307325}
   m_Layer: 0
   m_Name: Value
   m_TagString: Untagged
@@ -269,6 +270,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &939760252124307325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818939523974586558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd25bfa88405f16499f920c170259164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: T3
 --- !u!1 &4467565668399917733
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,6 +294,7 @@ GameObject:
   - component: {fileID: 3754843075243425108}
   - component: {fileID: 4998876249896352122}
   - component: {fileID: 2651078183694028511}
+  - component: {fileID: 6047894214150975064}
   m_Layer: 0
   m_Name: Value
   m_TagString: Untagged
@@ -403,6 +418,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6047894214150975064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4467565668399917733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd25bfa88405f16499f920c170259164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: T2
 --- !u!1 &4618740409860978635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,7 +1317,7 @@ MonoBehaviour:
   groundDistCheck: 0.3
   groundMask:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 64
   velocity: {x: 0, y: 0, z: 0}
   vel_magnitude: 0
   isGrounded: 0
@@ -1332,6 +1360,8 @@ MonoBehaviour:
   tab: {fileID: -2874006991715761804, guid: 2065f3482f5cfba49ad40c04c7c44ca2, type: 3}
   attack: {fileID: 1120369429361536294, guid: 2065f3482f5cfba49ad40c04c7c44ca2, type: 3}
   T1access: 0
+  T2access: 0
+  T3access: 0
   hasRepairTool: 0
 --- !u!1001 &1344921334039948927
 PrefabInstance:

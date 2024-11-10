@@ -21,6 +21,8 @@ public class PlayerInteractions : MonoBehaviour
     public InputActionReference attack;
 
     public bool T1access = false;
+    public bool T2access = false;
+    public bool T3access = false;
     public bool hasRepairTool = false;
     // Start is called before the first frame update
     void Start()
@@ -116,6 +118,10 @@ public class PlayerInteractions : MonoBehaviour
         {
             case "T1":
                 return T1access;
+            case "T2":
+                return T2access;
+            case"T3":
+                    return T3access;
             default:
                 return false;
         }

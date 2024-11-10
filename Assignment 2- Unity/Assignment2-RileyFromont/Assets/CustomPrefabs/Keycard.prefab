@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7426856583136562802}
   - component: {fileID: 8685871088392060666}
   - component: {fileID: 4609502411358186527}
-  - component: {fileID: 5665535800147467665}
+  - component: {fileID: 6732317147705889152}
   m_Layer: 7
   m_Name: Keycard
   m_TagString: Untagged
@@ -69,7 +69,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractCollider: {fileID: 8685871088392060666}
---- !u!54 &5665535800147467665
+  cardtype: 0
+  t1: {fileID: 4300000, guid: 5853a376bfee8e9488fd590daa7c56bb, type: 3}
+  t2: {fileID: 4300000, guid: 2b14f5e6069411c40b711cb480cd0207, type: 3}
+  t3: {fileID: 4300000, guid: eed2f9fba32ddd14a836630392ea04ae, type: 3}
+--- !u!54 &6732317147705889152
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

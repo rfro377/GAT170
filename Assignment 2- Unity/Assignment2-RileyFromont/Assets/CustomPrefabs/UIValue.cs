@@ -26,6 +26,20 @@ public class UIValue : MonoBehaviour
                     }
                     else { this.GetComponent<TMPro.TMP_Text>().text = "ACCESS DENIED"; }
                     break;
+                case "T2":
+                    if (Camera.main.GetComponent<PlayerInteractions>().T2access)
+                    {
+                        this.GetComponent<TMPro.TMP_Text>().text = "ACCESS GRANTED";
+                    }
+                    else { this.GetComponent<TMPro.TMP_Text>().text = "ACCESS DENIED"; }
+                    break;
+                case "T3":
+                    if (Camera.main.GetComponent<PlayerInteractions>().T3access)
+                    {
+                        this.GetComponent<TMPro.TMP_Text>().text = "ACCESS GRANTED";
+                    }
+                    else { this.GetComponent<TMPro.TMP_Text>().text = "ACCESS DENIED"; }
+                    break;
                 default:
                     this.GetComponent<TMPro.TMP_Text>().text = "NULL EXCEPTION";
                     break;
