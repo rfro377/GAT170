@@ -14,7 +14,7 @@ public class PlayerLook : MonoBehaviour
 
     public InputActionReference lookaction;
 
-    private bool LockLook = false;
+    public bool LockLook = false;
     void Start()
     {
         PlayerCam = Camera.main;

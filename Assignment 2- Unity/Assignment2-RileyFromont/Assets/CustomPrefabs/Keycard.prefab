@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7426856583136562802}
   - component: {fileID: 8685871088392060666}
   - component: {fileID: 4609502411358186527}
-  - component: {fileID: 6732317147705889152}
   m_Layer: 7
   m_Name: Keycard
   m_TagString: Untagged
@@ -68,38 +67,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d67cb6fc9f633c429108f9b7e38b905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractCollider: {fileID: 8685871088392060666}
+  InteractCollider: {fileID: 0}
+  ac: {fileID: 8300000, guid: 0a3f99b16a1cb8141999a208d80ded27, type: 3}
   cardtype: 0
   t1: {fileID: 4300000, guid: 5853a376bfee8e9488fd590daa7c56bb, type: 3}
   t2: {fileID: 4300000, guid: 2b14f5e6069411c40b711cb480cd0207, type: 3}
   t3: {fileID: 4300000, guid: eed2f9fba32ddd14a836630392ea04ae, type: 3}
---- !u!54 &6732317147705889152
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5113349285206446595}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &7458637182454434374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -156,6 +129,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23797164467783760, guid: 8f4ab6e783cf1e649a5491f9545b6d4c, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 23797164467783760, guid: 8f4ab6e783cf1e649a5491f9545b6d4c, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e713aea97812c114aa343e4488f3c221, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -22,4 +22,10 @@ public class Interactable : MonoBehaviour
     //Overridden by  Child Scripts Dependant on Behaviour
     public virtual void Interact(GameObject go) { }
     public virtual void Activate(bool activated) { }
+
+    public IEnumerator DestroyMe()
+    {
+        Destroy(this.gameObject);
+        yield return null;
+    }
 }

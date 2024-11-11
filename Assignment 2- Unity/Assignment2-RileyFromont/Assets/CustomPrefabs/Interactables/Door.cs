@@ -14,6 +14,7 @@ public class Door : Interactable
     {
         isActivated = activated;
         LerpAlpha = 0;
+        GetComponentInChildren<AudioSource>().Play();
     }
     void Start()
     {

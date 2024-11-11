@@ -12,7 +12,7 @@ public enum CardType
 public class T1_keypadpickup : PickUp
 {
     public CardType cardtype = CardType.T1;
-
+    
     public Mesh t1;
     public Mesh t2;
     public Mesh t3;
@@ -44,7 +44,7 @@ public class T1_keypadpickup : PickUp
 
     public override void Interact(GameObject g)
     {
-
+        
         switch (cardtype)
         {
             case CardType.T1:
@@ -61,7 +61,7 @@ public class T1_keypadpickup : PickUp
                 break;
 
         }
-
+        
         Destroy(this.gameObject);
 
     }

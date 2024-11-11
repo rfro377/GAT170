@@ -21,6 +21,10 @@ public class ShowerEffects : MonoBehaviour
         isOn = boxcollider.bounds.Contains(Camera.main.transform.position);
         if (isOn)
         {
+            if (!this.GetComponent<AudioSource>().isPlaying)
+            {
+                GetComponent<AudioSource>().Play();
+            }
             foreach (var particle in particles)
             {
                 particle.Play();
@@ -28,6 +32,7 @@ public class ShowerEffects : MonoBehaviour
         }
         else
         {
+            GetComponent<AudioSource>().Stop();
             foreach (var particle in particles)
             {
                 particle.Stop();

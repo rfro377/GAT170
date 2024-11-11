@@ -20,6 +20,9 @@ public class PlayerInteractions : MonoBehaviour
     public InputActionReference tab;
     public InputActionReference attack;
 
+    public AudioClip repairtool_click;
+    public AudioClip repairtool_buzz;
+
     public bool T1access = false;
     public bool T2access = false;
     public bool T3access = false;
@@ -32,7 +35,7 @@ public class PlayerInteractions : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { 
         JobPadHandle();
         InteractHandle();
         RepairToolHandle();
@@ -50,7 +53,11 @@ public class PlayerInteractions : MonoBehaviour
                 Collider hitobj = hit.collider;
                 if (hitobj.GetComponent<Interactable>() != null)
                 {
+                    if (hitobj.GetComponent<PickUp>() != null) { 
+                        this.GetComponent<AudioSource>().PlayOneShot(hitobj.GetComponent<PickUp>().ac);
+                    }
                     hitobj.GetComponent<Interactable>().Interact(this.gameObject);
+                    
                 }
             }
         }
@@ -99,8 +106,24 @@ public class PlayerInteractions : MonoBehaviour
     {
         if (hasRepairTool)
         {
+            if (attack.action.triggered)
+            {
+                GetComponent<AudioSource>().loop = false;
+                GetComponent<AudioSource>().PlayOneShot(repairtool_click);
+            }
+            if (attack.action.WasReleasedThisFrame())
+            {
+                GetComponent<AudioSource>().Stop();
+                GetComponent<AudioSource>().loop = false;
+                GetComponent<AudioSource>().PlayOneShot(repairtool_click);
+            }
             if (attack.action.IsPressed())
             {
+                if (!GetComponent<AudioSource>().isPlaying)
+                {
+                    GetComponent<AudioSource>().loop = true;
+                    GetComponent<AudioSource>().PlayOneShot(repairtool_buzz);
+                }
                 //Activate RepairTool
                 repairtool.GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(true);
                 repairtool.GetComponent<WeaponScript>().Shoot();

@@ -16,6 +16,10 @@ public class FillBar : MonoBehaviour
     }
     public void Fill()
     {
+        if (!isFilling)
+        {
+            GetComponent<AudioSource>().Play();
+        }
         isFilling = true;
     }
 

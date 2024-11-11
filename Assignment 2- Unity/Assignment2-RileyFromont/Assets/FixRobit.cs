@@ -18,6 +18,7 @@ public class FixRobit : Interactable
         {
             this.GetComponent<Wandering>().isFixed = true;
             FindObjectOfType<GameManager>().robits--;
+            GetComponent<AudioSource>().Play();
         }
     }
 }

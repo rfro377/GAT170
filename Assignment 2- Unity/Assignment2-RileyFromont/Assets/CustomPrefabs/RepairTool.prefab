@@ -69,6 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractCollider: {fileID: 4979873219818235271}
+  ac: {fileID: 0}
 --- !u!54 &7657427074894362554
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -156,6 +157,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23812533421254286, guid: 054873fb4d8fb414f9c75a47ff19cfe1, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 23812533421254286, guid: 054873fb4d8fb414f9c75a47ff19cfe1, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e713aea97812c114aa343e4488f3c221, type: 2}
     - target: {fileID: 7015700423832168860, guid: 054873fb4d8fb414f9c75a47ff19cfe1, type: 3}
       propertyPath: playOnAwake
       value: 0
